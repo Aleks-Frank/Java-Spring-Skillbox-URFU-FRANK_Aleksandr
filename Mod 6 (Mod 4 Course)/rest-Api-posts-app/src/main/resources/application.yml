@@ -1,0 +1,14 @@
+spring:
+  main:
+    allow-circular-references: true
+  jpa:
+    generate-ddl: true
+    open-in-view: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/posts_db
+    username: postgres
+    password: postgres
+    hikari:
+      schema: posts_schema
+      connection-init-sql: CREATE SCHEMA IF NOT EXISTS posts_schema
+      connection-timeout: 10000
